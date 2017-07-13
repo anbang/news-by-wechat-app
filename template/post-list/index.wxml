@@ -1,0 +1,21 @@
+<template name="postListTem">
+      <view class="post-item">
+        <view class="post-title">{{item.title}}</view>
+        <view class="post-auther-date">
+          <image src="{{item.avatar}}" class="post-auther"></image>
+          <text class="post-date">{{item.date}}</text>
+        </view>
+        <view class="post-cont-wrap">
+          <view class="post-images-wrap">
+            <image class="post-image" src="{{item.imgSrc}}"></image>
+          </view>
+          <view catchlongtap="post-cont">{{item.content}}</view>
+        </view>
+        <view class="post-bottom">
+          <image src="/images/icon/star.png" class="post-icon"></image>
+          <text class="post-dir">{{item.collection}}</text>
+          <image src="/images/icon/view.png" class="post-icon"></image>
+          <text class="post-dir">{{item.reading}}</text>
+        </view>
+      </view>
+</template>

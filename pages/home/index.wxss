@@ -1,3 +1,5 @@
+@import "/template/post-list/index.wxss";
+
 .swiper-wrap{
   width: 100%;
   height: 300rpx;
@@ -9,61 +11,4 @@
 }
 .post-wrap{
   margin: 10px 0;
-}
-.post-item{
-  border:1px solid #f4f4f4;
-  padding: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.post-title{
-  font-weight: 700;
-}
-.post-auther-date{
-  flex-direction: row;
-  line-height: 50rpx;
-  vertical-align: middle;
-  margin: 5px 0 0;
-  font-size: 32rpx;
-}
-.post-auther{
-  width: 50rpx;
-  height: 50rpx;
-  border-radius: 50%;
-  vertical-align: middle;
-}
-.post-date{
-  margin-left: 10px;
-  color: #666;
-}
-.post-cont-wrap{
-  margin-top: 10px;
-}
-.post-images-wrap{
-  height: 200px;
-  overflow: hidden;
-  margin-bottom: 5px;
-}
-.post-image{
-   width: 100%; 
-}
-.post-cont{
-  font-size: 32rpx;
-}
-.post-bottom{
-  margin-top: 10px;
-  flex-direction: row;
-  vertical-align: middle;
-}
-.post-icon{
-  width: 30rpx;
-  height: 30rpx;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-.post-dir{
-  font-size: 24rpx;
-  color: #666;
-  margin-right: 15px;
 }

@@ -1,39 +1,19 @@
+<import src="/template/post-list/index.wxml" />
 <view class="home-page">
-   <swiper
-    style="width:100%;height:350rpx;overflow:hidden" 
-    indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <swiper style="width:100%;height:350rpx;overflow:hidden" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
-        <image src="{{item}}" class="slide-image"  style="width:100%;"  />
+        <image src="{{item}}" class="slide-image" style="width:100%;" />
       </swiper-item>
     </block>
-  </swiper> 
-  <view class="post-wrap"> 
+  </swiper>
+  <view class="post-wrap">
     <block wx:for="{{postList}}" wx:for-key="item">
-      <view class="post-item">
-        <view class="post-title">{{item.title}}</view>
-        <view class="post-auther-date">
-          <image src="{{item.avatar}}" class="post-auther"></image>
-          <text class="post-date">{{item.date}}</text>
-        </view>
-        <view class="post-cont-wrap">
-          <view class="post-images-wrap">
-          <image class="post-image" src="{{item.imgSrc}}"></image>
-          </view>
-          <view catchlongtap="post-cont">{{item.content}}</view>
-        </view>
-        <view class="post-bottom">
-          <image src="/images/icon/star.png" class="post-icon"></image>
-          <text class="post-dir">{{item.collection}}</text>
-          <image src="/images/icon/view.png" class="post-icon"></image>
-          <text class="post-dir">{{item.reading}}</text>
-        </view>
-      </view>
+      <template is="postListTem" data="{{item}}"></template>
     </block>
-    
+
 
 
   </view>
-  
+
 </view>
