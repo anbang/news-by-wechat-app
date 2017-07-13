@@ -9,45 +9,29 @@
       </swiper-item>
     </block>
   </swiper> 
-  <view class="post-wrap">
-    <view class="post-item">
-      <view class="post-title">这是一段标题文字</view>
-      <view class="post-auther-date">
-        <image src="/pages/images/avatar/1.png" class="post-auther"></image>
-        <text class="post-date">2017-09-27</text>
-      </view>
-      <view class="post-cont-wrap">
-        <view class="post-images-wrap">
-         <image class="post-image" src="/pages/images/post/cat.png"></image>
+  <view class="post-wrap"> 
+    <block wx:for="{{postList}}" wx:for-key="item">
+      <view class="post-item">
+        <view class="post-title">{{item.title}}</view>
+        <view class="post-auther-date">
+          <image src="{{item.avatar}}" class="post-auther"></image>
+          <text class="post-date">{{item.date}}</text>
         </view>
-        <view catchlongtap="post-cont">吧啦啊爸爸爸爸爸爸哈哈哈哈哈多哈的哈哈哈的时代</view>
-      </view>
-      <view class="post-bottom">
-        <image src="/pages/images/icon/star.png" class="post-icon"></image>
-        <text class="post-dir">17</text>
-        <image src="/pages/images/icon/view.png" class="post-icon"></image>
-        <text class="post-dir">19</text>
-      </view>
-    </view>
-    <view class="post-item">
-      <view class="post-title">这是一段标题文字</view>
-      <view class="post-auther-date">
-        <image src="/pages/images/avatar/1.png" class="post-auther"></image>
-        <text class="post-date">2017-09-27</text>
-      </view>
-      <view class="post-cont-wrap">
-        <view class="post-images-wrap">
-         <image class="post-image" src="/pages/images/post/cat.png"></image>
+        <view class="post-cont-wrap">
+          <view class="post-images-wrap">
+          <image class="post-image" src="{{item.imgSrc}}"></image>
+          </view>
+          <view catchlongtap="post-cont">{{item.content}}</view>
         </view>
-        <view catchlongtap="post-cont">吧啦啊爸爸爸爸爸爸哈哈哈哈哈多哈的哈哈哈的时代</view>
+        <view class="post-bottom">
+          <image src="/images/icon/star.png" class="post-icon"></image>
+          <text class="post-dir">{{item.collection}}</text>
+          <image src="/images/icon/view.png" class="post-icon"></image>
+          <text class="post-dir">{{item.reading}}</text>
+        </view>
       </view>
-      <view class="post-bottom">
-        <image src="/pages/images/icon/star.png" class="post-icon"></image>
-        <text class="post-dir">17</text>
-        <image src="/pages/images/icon/view.png" class="post-icon"></image>
-        <text class="post-dir">19</text>
-      </view>
-    </view>
+    </block>
+    
 
 
   </view>
