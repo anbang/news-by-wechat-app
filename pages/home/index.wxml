@@ -1,0 +1,55 @@
+<view class="home-page">
+   <swiper
+    style="width:100%;height:350rpx;overflow:hidden" 
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"  style="width:100%;"  />
+      </swiper-item>
+    </block>
+  </swiper> 
+  <view class="post-wrap">
+    <view class="post-item">
+      <view class="post-title">这是一段标题文字</view>
+      <view class="post-auther-date">
+        <image src="/pages/images/avatar/1.png" class="post-auther"></image>
+        <text class="post-date">2017-09-27</text>
+      </view>
+      <view class="post-cont-wrap">
+        <view class="post-images-wrap">
+         <image class="post-image" src="/pages/images/post/cat.png"></image>
+        </view>
+        <view catchlongtap="post-cont">吧啦啊爸爸爸爸爸爸哈哈哈哈哈多哈的哈哈哈的时代</view>
+      </view>
+      <view class="post-bottom">
+        <image src="/pages/images/icon/star.png" class="post-icon"></image>
+        <text class="post-dir">17</text>
+        <image src="/pages/images/icon/view.png" class="post-icon"></image>
+        <text class="post-dir">19</text>
+      </view>
+    </view>
+    <view class="post-item">
+      <view class="post-title">这是一段标题文字</view>
+      <view class="post-auther-date">
+        <image src="/pages/images/avatar/1.png" class="post-auther"></image>
+        <text class="post-date">2017-09-27</text>
+      </view>
+      <view class="post-cont-wrap">
+        <view class="post-images-wrap">
+         <image class="post-image" src="/pages/images/post/cat.png"></image>
+        </view>
+        <view catchlongtap="post-cont">吧啦啊爸爸爸爸爸爸哈哈哈哈哈多哈的哈哈哈的时代</view>
+      </view>
+      <view class="post-bottom">
+        <image src="/pages/images/icon/star.png" class="post-icon"></image>
+        <text class="post-dir">17</text>
+        <image src="/pages/images/icon/view.png" class="post-icon"></image>
+        <text class="post-dir">19</text>
+      </view>
+    </view>
+
+
+  </view>
+  
+</view>
